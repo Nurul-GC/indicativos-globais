@@ -11,7 +11,6 @@
 
 # User-extra-stuff
 .idea
-.idea/.gitignore
 
 # Generated files
 .idea/**/contentModel.xml
