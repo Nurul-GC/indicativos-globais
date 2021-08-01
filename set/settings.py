@@ -121,7 +121,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+if not path.exists(f'{BASE_DIR}/static/'):
+    mkdir(f'{BASE_DIR}/static/')
+
+STATIC_URL = f'{BASE_DIR}/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
