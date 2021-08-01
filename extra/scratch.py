@@ -258,11 +258,3 @@ class GCI:
             indicativo = self.dados_globais[pais]
             indicativos.append(indicativo)
         return indicativos
-
-
-class GCdb(GCI):
-    def conectarDb(self):
-        db = None
-        try:
-            db = sqlite3.connect(indig.db)
-            db.execute('CREATE TABLE')
