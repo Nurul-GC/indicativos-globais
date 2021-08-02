@@ -1,6 +1,3 @@
-import sqlite3
-
-
 class GCI:
     def __init__(self):
         self.dados_globais = {
@@ -258,3 +255,10 @@ class GCI:
             indicativo = self.dados_globais[pais]
             indicativos.append(indicativo)
         return indicativos
+
+    def indicativo_especifico(self, _pais):
+        try:
+            return f"{_pais}: {self.dados_globais[_pais]}"
+        except KeyError:
+            return f"nenhum indicativo correspondente a {_pais}, " \
+                   f"certifique-se de escrever correctamente o nome do pais!"
