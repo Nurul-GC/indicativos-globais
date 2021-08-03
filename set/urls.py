@@ -18,14 +18,14 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
-from api.views import UserViewSet, GroupViewSet
+from api.views import IndicativosViewSet, PaisesViewSet
 
 router = DefaultRouter()
-router.register('user', UserViewSet)
-router.register('group', GroupViewSet)
+router.register('indicativos', IndicativosViewSet)
+router.register('paises', PaisesViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('admin/', admin.site.urls),
+    path('master/', admin.site.urls),
     path('api-auth/', include(rest_framework.urls, namespace='rest_framework'))
 ]
