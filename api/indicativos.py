@@ -258,7 +258,7 @@ class GCI:
 
     def indicativo_especifico(self, _pais):
         try:
-            return f"{_pais}: {self.dados_globais[_pais]}"
+            return f"{self.dados_globais[_pais]}"
         except KeyError:
             return f"nenhum indicativo correspondente a {_pais}, " \
                    f"certifique-se de escrever correctamente o nome do pais!"
