@@ -18,14 +18,11 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
-from api.views import IndicativosViewSet, PaisesViewSet
+from api.views import IndicativosViewSet
 
-router = DefaultRouter()
-router.register('indicativos', IndicativosViewSet)
-router.register('paises', PaisesViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('indicativos/', include(IndicativosViewSet.as_view)),
     path('master/', admin.site.urls),
     path('api-auth/', include(rest_framework.urls, namespace='rest_framework'))
 ]
