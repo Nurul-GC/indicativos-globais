@@ -1,6 +1,5 @@
 from rest_framework.serializers import HyperlinkedModelSerializer
-
-from api.models import Indicativos
+from indig.models import Indicativos
 
 
 class IndicativoSerializer(HyperlinkedModelSerializer):
