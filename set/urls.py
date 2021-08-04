@@ -20,9 +20,11 @@ from rest_framework.routers import DefaultRouter
 
 from api.views import IndicativosViewSet
 
+router = DefaultRouter()
+router.register('indicativos', IndicativosViewSet)
 
 urlpatterns = [
-    path('indicativos/', include(IndicativosViewSet.as_view)),
+    path('', include(router.urls)),
     path('master/', admin.site.urls),
     path('api-auth/', include(rest_framework.urls, namespace='rest_framework'))
 ]
