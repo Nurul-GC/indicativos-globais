@@ -1,7 +1,6 @@
 from rest_framework import viewsets
-
-from api.models import Indicativos
-from api.serializers import IndicativoSerializer
+from indig.models import Indicativos
+from indig.serializers import IndicativoSerializer
 
 
 # Create your views here.
