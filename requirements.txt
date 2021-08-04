@@ -1,2 +1,4 @@
 Django
 djangorestframework
+django_heroku
+whitenoise
