@@ -11,7 +11,7 @@ class Indicativos(models.Model):
         INDICATIVOS = GCI().indicativo_especifico(_pais=p)
         PAISES.append((INDICATIVOS, p))
 
-    pais = models.CharField(max_length=50, choices=PAISES)
+    pais = models.CharField(max_length=50, choices=PAISES, unique=True)
 
     def __str__(self):
         return self.pais
