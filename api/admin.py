@@ -1,7 +1,6 @@
 from django.contrib import admin
 
-from api.models import Indicativos, Paises
+from api.models import Indicativos
 
 # Register your models here.
-admin.site.register(Paises)
 admin.site.register(Indicativos)
