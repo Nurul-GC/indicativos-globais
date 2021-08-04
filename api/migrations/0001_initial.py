@@ -13,7 +13,11 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Indicativos',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True,
+                    primary_key=True,
+                    serialize=False,
+                    verbose_name='ID')),
                 ('pais', models.CharField(
                     choices=[
                         ('(AFEGANISTÃO, 93)', 'AFEGANISTÃO'), ('(ÁFRICA DO SUL, 27)', 'ÁFRICA DO SUL'), ('(ALASKA, 1907)', 'ALASKA'), ('(ALBÂNIA, 355)', 'ALBÂNIA'),
