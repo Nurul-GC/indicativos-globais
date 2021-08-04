@@ -1,6 +1,5 @@
 from django.db import models
-
-from api.indicativos import GCI
+from indig.indicativos import GCI
 
 
 # Create your models here.
