@@ -1,4 +1,3 @@
-from django.db import router
 from rest_framework import viewsets
 
 from api.models import Indicativos
