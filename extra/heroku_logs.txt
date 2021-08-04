@@ -1,0 +1,106 @@
+(node:74533) SyntaxError Plugin: heroku: /home/nurul-gc/.local/share/heroku/config.json: Unexpected end of JSON input
+module: @oclif/config@1.17.0
+task: runHook prerun
+plugin: heroku
+root: /snap/heroku/4068
+See more details with DEBUG=*
+2021-08-04T21:01:43.253514+00:00 heroku[web.1]: Starting process with command `gunicorn locallibrary.wsgi --log-file -`
+2021-08-04T21:01:47.165949+00:00 app[web.1]: bash: gunicorn: command not found
+2021-08-04T21:01:47.238816+00:00 heroku[web.1]: Process exited with status 127
+2021-08-04T21:01:47.337788+00:00 heroku[web.1]: State changed from starting to crashed
+2021-08-04T21:01:47.350205+00:00 heroku[web.1]: State changed from crashed to starting
+2021-08-04T21:01:53.035760+00:00 heroku[web.1]: Starting process with command `gunicorn locallibrary.wsgi --log-file -`
+2021-08-04T21:01:55.860903+00:00 app[web.1]: bash: gunicorn: command not found
+2021-08-04T21:01:55.910073+00:00 heroku[web.1]: Process exited with status 127
+2021-08-04T21:01:55.972335+00:00 heroku[web.1]: State changed from starting to crashed
+2021-08-04T21:02:14.275599+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=indigc.herokuapp.com request_id=40e35b56-4d5a-4c31-a354-178f6782d6fa fwd="102.250.0.105" dyno= connect= service= status=503 bytes= protocol=https
+2021-08-04T21:02:15.961549+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=indigc.herokuapp.com request_id=3f671add-08e5-4a61-8f21-4843a70437b1 fwd="102.250.0.33" dyno= connect= service= status=503 bytes= protocol=https
+2021-08-04T21:10:44.000000+00:00 app[api]: Build started by user nuruldecarvalho@gmail.com
+2021-08-04T21:11:12.619402+00:00 app[api]: Release v7 created by user nuruldecarvalho@gmail.com
+2021-08-04T21:11:12.619402+00:00 app[api]: Deploy c982a383 by user nuruldecarvalho@gmail.com
+2021-08-04T21:11:12.976410+00:00 heroku[web.1]: State changed from crashed to starting
+2021-08-04T21:11:20.374745+00:00 heroku[web.1]: Starting process with command `gunicorn set.wsgi --log-file -`
+2021-08-04T21:11:24.000000+00:00 app[api]: Build succeeded
+2021-08-04T21:11:24.193244+00:00 app[web.1]: bash: gunicorn: command not found
+2021-08-04T21:11:24.275589+00:00 heroku[web.1]: Process exited with status 127
+2021-08-04T21:11:24.365726+00:00 heroku[web.1]: State changed from starting to crashed
+2021-08-04T21:13:53.251609+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=indigc.herokuapp.com request_id=70b7c33e-b7d3-4fe5-9ad9-4965437fe5d2 fwd="102.250.0.33" dyno= connect= service= status=503 bytes= protocol=https
+2021-08-04T21:13:54.069507+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=indigc.herokuapp.com request_id=a32fe396-375b-46b4-a57b-115655d138ad fwd="102.250.0.105" dyno= connect= service= status=503 bytes= protocol=https
+2021-08-04T21:25:40.000000+00:00 app[api]: Build started by user nuruldecarvalho@gmail.com
+2021-08-04T21:26:29.268854+00:00 app[api]: Release v8 created by user nuruldecarvalho@gmail.com
+2021-08-04T21:26:29.268854+00:00 app[api]: Deploy eaa36fef by user nuruldecarvalho@gmail.com
+2021-08-04T21:26:29.600413+00:00 heroku[web.1]: State changed from crashed to starting
+2021-08-04T21:26:35.603747+00:00 heroku[web.1]: Starting process with command `gunicorn set.wsgi --log-file -`
+2021-08-04T21:26:38.994632+00:00 app[web.1]: [2021-08-04 21:26:38 +0000] [4] [INFO] Starting gunicorn 20.1.0
+2021-08-04T21:26:38.995404+00:00 app[web.1]: [2021-08-04 21:26:38 +0000] [4] [INFO] Listening at: http://0.0.0.0:20180 (4)
+2021-08-04T21:26:38.995527+00:00 app[web.1]: [2021-08-04 21:26:38 +0000] [4] [INFO] Using worker: sync
+2021-08-04T21:26:39.000000+00:00 app[api]: Build succeeded
+2021-08-04T21:26:39.000561+00:00 app[web.1]: [2021-08-04 21:26:38 +0000] [8] [INFO] Booting worker with pid: 8
+2021-08-04T21:26:39.079393+00:00 app[web.1]: [2021-08-04 21:26:39 +0000] [9] [INFO] Booting worker with pid: 9
+2021-08-04T21:26:39.780712+00:00 heroku[web.1]: State changed from starting to up
+2021-08-04T21:26:52.443725+00:00 heroku[web.1]: State changed from crashed to starting
+2021-08-04T21:28:20.949846+00:00 heroku[router]: at=info method=GET path="/" host=indigc.herokuapp.com request_id=8e83fcb1-6ec2-4fb4-bf74-44ef189e6b41 fwd="102.250.0.118" dyno=web.1 connect=1ms service=123ms status=200 bytes=5933 protocol=https
+2021-08-04T21:28:20.952568+00:00 app[web.1]: 10.41.150.123 - - [04/Aug/2021:23:28:20 +0200] "GET / HTTP/1.1" 200 5476 "https://dashboard.heroku.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:21.386525+00:00 heroku[router]: at=info method=GET path="/static/rest_framework/css/bootstrap.min.77017a69879a.css" host=indigc.herokuapp.com request_id=17c2afef-6d5a-44f2-b275-878fdd8234ee fwd="102.250.0.118" dyno=web.1 connect=1ms service=9ms status=200 bytes=20005 protocol=https
+2021-08-04T21:28:21.388945+00:00 app[web.1]: 10.41.150.123 - - [04/Aug/2021:23:28:21 +0200] "GET /static/rest_framework/css/bootstrap.min.77017a69879a.css HTTP/1.1" 200 0 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:21.391019+00:00 heroku[router]: at=info method=GET path="/static/rest_framework/css/bootstrap-tweaks.46ed116b0edd.css" host=indigc.herokuapp.com request_id=d759392f-feba-4ac3-8f8e-92efb0883aa5 fwd="102.250.0.12" dyno=web.1 connect=1ms service=8ms status=200 bytes=1624 protocol=https
+2021-08-04T21:28:21.392704+00:00 app[web.1]: 10.30.121.144 - - [04/Aug/2021:23:28:21 +0200] "GET /static/rest_framework/css/bootstrap-tweaks.46ed116b0edd.css HTTP/1.1" 200 0 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:21.693554+00:00 heroku[router]: at=info method=GET path="/static/rest_framework/css/prettify.a987f72342ee.css" host=indigc.herokuapp.com request_id=8ca2fd9e-50b0-4135-93ec-275b5566fdb4 fwd="102.250.0.12" dyno=web.1 connect=1ms service=3ms status=200 bytes=745 protocol=https
+2021-08-04T21:28:21.695346+00:00 app[web.1]: 10.30.121.144 - - [04/Aug/2021:23:28:21 +0200] "GET /static/rest_framework/css/prettify.a987f72342ee.css HTTP/1.1" 200 0 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:21.918302+00:00 heroku[router]: at=info method=GET path="/static/rest_framework/css/default.789dfb5732d7.css" host=indigc.herokuapp.com request_id=268ca21e-d147-403f-97a7-8592a0cd8b79 fwd="102.250.0.33" dyno=web.1 connect=0ms service=2ms status=200 bytes=967 protocol=https
+2021-08-04T21:28:21.920472+00:00 app[web.1]: 10.81.216.163 - - [04/Aug/2021:23:28:21 +0200] "GET /static/rest_framework/css/default.789dfb5732d7.css HTTP/1.1" 200 0 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:21.966083+00:00 heroku[router]: at=info method=GET path="/static/rest_framework/js/jquery-3.5.1.min.dc5e7f18c8d3.js" host=indigc.herokuapp.com request_id=69e6a614-a699-4289-aa56-2c3fb7e55a43 fwd="102.250.0.118" dyno=web.1 connect=1ms service=4ms status=200 bytes=31245 protocol=https
+2021-08-04T21:28:21.967213+00:00 app[web.1]: 10.41.150.123 - - [04/Aug/2021:23:28:21 +0200] "GET /static/rest_framework/js/jquery-3.5.1.min.dc5e7f18c8d3.js HTTP/1.1" 200 0 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:21.977973+00:00 heroku[router]: at=info method=GET path="/static/rest_framework/js/ajax-form.0ea6e6052ab5.js" host=indigc.herokuapp.com request_id=c70ca0d2-836b-4277-ba1e-3af018f12278 fwd="102.250.0.105" dyno=web.1 connect=0ms service=3ms status=200 bytes=1903 protocol=https
+2021-08-04T21:28:21.979190+00:00 app[web.1]: 10.33.255.116 - - [04/Aug/2021:23:28:21 +0200] "GET /static/rest_framework/js/ajax-form.0ea6e6052ab5.js HTTP/1.1" 200 0 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:21.993757+00:00 heroku[router]: at=info method=GET path="/static/rest_framework/js/csrf.969930007329.js" host=indigc.herokuapp.com request_id=e64f1c93-9bf4-4c45-abbf-c361290bc242 fwd="102.250.0.12" dyno=web.1 connect=1ms service=2ms status=200 bytes=1149 protocol=https
+2021-08-04T21:28:21.995372+00:00 app[web.1]: 10.30.121.144 - - [04/Aug/2021:23:28:21 +0200] "GET /static/rest_framework/js/csrf.969930007329.js HTTP/1.1" 200 0 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:22.016920+00:00 heroku[router]: at=info method=GET path="/static/rest_framework/js/bootstrap.min.2f34b630ffe3.js" host=indigc.herokuapp.com request_id=f4a7deb4-7412-4965-bbc0-eafada50ab07 fwd="102.250.0.33" dyno=web.1 connect=1ms service=2ms status=200 bytes=11261 protocol=https
+2021-08-04T21:28:22.018623+00:00 app[web.1]: 10.181.143.206 - - [04/Aug/2021:23:28:22 +0200] "GET /static/rest_framework/js/bootstrap.min.2f34b630ffe3.js HTTP/1.1" 200 0 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:22.022850+00:00 heroku[router]: at=info method=GET path="/static/rest_framework/js/prettify-min.709bfcc456c6.js" host=indigc.herokuapp.com request_id=8f4d6e97-89b5-4e99-a9fa-f242840462eb fwd="102.250.0.105" dyno=web.1 connect=0ms service=1ms status=200 bytes=6389 protocol=https
+2021-08-04T21:28:22.022995+00:00 app[web.1]: 10.45.84.124 - - [04/Aug/2021:23:28:22 +0200] "GET /static/rest_framework/js/prettify-min.709bfcc456c6.js HTTP/1.1" 200 0 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:22.209743+00:00 heroku[router]: at=info method=GET path="/static/rest_framework/js/default.5b08897dbdc3.js" host=indigc.herokuapp.com request_id=729f7602-477b-4673-814a-9b9a80df1a3c fwd="102.250.0.33" dyno=web.1 connect=0ms service=2ms status=200 bytes=933 protocol=https
+2021-08-04T21:28:22.212042+00:00 app[web.1]: 10.81.216.163 - - [04/Aug/2021:23:28:22 +0200] "GET /static/rest_framework/js/default.5b08897dbdc3.js HTTP/1.1" 200 0 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:22.337984+00:00 heroku[router]: at=info method=GET path="/static/rest_framework/img/grid.a4b938cf382b.png" host=indigc.herokuapp.com request_id=2be3da61-a79c-4356-87d2-e2347beb9d83 fwd="102.250.0.12" dyno=web.1 connect=1ms service=3ms status=200 bytes=1751 protocol=https
+2021-08-04T21:28:22.339741+00:00 app[web.1]: 10.30.121.144 - - [04/Aug/2021:23:28:22 +0200] "GET /static/rest_framework/img/grid.a4b938cf382b.png HTTP/1.1" 200 0 "https://indigc.herokuapp.com/static/rest_framework/css/bootstrap-tweaks.46ed116b0edd.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:22.968779+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=indigc.herokuapp.com request_id=06ed9475-25ae-4c1f-989f-6a6b7618530b fwd="102.250.0.12" dyno=web.1 connect=1ms service=127ms status=404 bytes=411 protocol=https
+2021-08-04T21:28:22.970314+00:00 app[web.1]: 10.30.121.144 - - [04/Aug/2021:23:28:22 +0200] "GET /favicon.ico HTTP/1.1" 404 179 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:27.593848+00:00 app[web.1]: /app/.heroku/python/lib/python3.8/site-packages/rest_framework/pagination.py:200: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'indig.models.Indicativos'> QuerySet.
+2021-08-04T21:28:27.593860+00:00 app[web.1]: paginator = self.django_paginator_class(queryset, page_size)
+2021-08-04T21:28:28.132890+00:00 heroku[router]: at=info method=GET path="/indicativos/" host=indigc.herokuapp.com request_id=bab5ddef-9942-47e2-a2c7-d4a427f343b0 fwd="102.250.0.12" dyno=web.1 connect=1ms service=544ms status=500 bytes=403 protocol=https
+2021-08-04T21:28:28.134311+00:00 app[web.1]: 10.30.121.144 - - [04/Aug/2021:23:28:28 +0200] "GET /indicativos/ HTTP/1.1" 500 145 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:37.295072+00:00 heroku[router]: at=info method=GET path="/" host=indigc.herokuapp.com request_id=250a56e3-de1e-4c16-99c7-6fa99450f6b2 fwd="102.250.0.12" dyno=web.1 connect=1ms service=79ms status=200 bytes=5933 protocol=https
+2021-08-04T21:28:37.296680+00:00 app[web.1]: 10.30.121.144 - - [04/Aug/2021:23:28:37 +0200] "GET / HTTP/1.1" 200 5476 "https://dashboard.heroku.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:28:44.287959+00:00 heroku[router]: at=info method=GET path="/indicativos/" host=indigc.herokuapp.com request_id=a877a58a-d4ea-469c-887e-0bbf15cfdb98 fwd="102.250.0.12" dyno=web.1 connect=1ms service=84ms status=500 bytes=403 protocol=https
+2021-08-04T21:28:44.289575+00:00 app[web.1]: 10.30.121.144 - - [04/Aug/2021:23:28:44 +0200] "GET /indicativos/ HTTP/1.1" 500 145 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:29:02.255128+00:00 heroku[router]: at=info method=OPTIONS path="/" host=indigc.herokuapp.com request_id=74aea5bc-88fd-437c-a634-ae99e1ae5466 fwd="102.250.0.12" dyno=web.1 connect=1ms service=23ms status=200 bytes=6182 protocol=https
+2021-08-04T21:29:02.257849+00:00 app[web.1]: 10.30.121.144 - - [04/Aug/2021:23:29:02 +0200] "OPTIONS / HTTP/1.1" 200 5725 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:29:11.241606+00:00 heroku[router]: at=info method=GET path="/" host=indigc.herokuapp.com request_id=0fc7bad6-1fc2-447c-9d75-4739e8b3616a fwd="102.250.0.12" dyno=web.1 connect=1ms service=15ms status=200 bytes=5933 protocol=https
+2021-08-04T21:29:11.242849+00:00 app[web.1]: 10.30.121.144 - - [04/Aug/2021:23:29:11 +0200] "GET / HTTP/1.1" 200 5476 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:32:55.000000+00:00 app[api]: Build started by user nuruldecarvalho@gmail.com
+2021-08-04T21:33:27.770650+00:00 app[api]: Deploy 513e4b82 by user nuruldecarvalho@gmail.com
+2021-08-04T21:33:27.770650+00:00 app[api]: Release v9 created by user nuruldecarvalho@gmail.com
+2021-08-04T21:33:28.125601+00:00 heroku[web.1]: Restarting
+2021-08-04T21:33:28.145818+00:00 heroku[web.1]: State changed from up to starting
+2021-08-04T21:33:29.345375+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2021-08-04T21:33:29.534668+00:00 app[web.1]: [2021-08-04 23:33:29 +0200] [8] [INFO] Worker exiting (pid: 8)
+2021-08-04T21:33:29.535424+00:00 app[web.1]: [2021-08-04 21:33:29 +0000] [4] [INFO] Handling signal: term
+2021-08-04T21:33:29.545965+00:00 app[web.1]: [2021-08-04 23:33:29 +0200] [9] [INFO] Worker exiting (pid: 9)
+2021-08-04T21:33:29.842772+00:00 app[web.1]: [2021-08-04 21:33:29 +0000] [4] [INFO] Shutting down: Master
+2021-08-04T21:33:29.953778+00:00 heroku[web.1]: Process exited with status 0
+2021-08-04T21:33:34.551983+00:00 heroku[web.1]: Starting process with command `gunicorn set.wsgi --log-file -`
+2021-08-04T21:33:38.000000+00:00 app[api]: Build succeeded
+2021-08-04T21:33:39.143210+00:00 app[web.1]: [2021-08-04 21:33:39 +0000] [4] [INFO] Starting gunicorn 20.1.0
+2021-08-04T21:33:39.144098+00:00 app[web.1]: [2021-08-04 21:33:39 +0000] [4] [INFO] Listening at: http://0.0.0.0:50590 (4)
+2021-08-04T21:33:39.144251+00:00 app[web.1]: [2021-08-04 21:33:39 +0000] [4] [INFO] Using worker: sync
+2021-08-04T21:33:39.156798+00:00 app[web.1]: [2021-08-04 21:33:39 +0000] [8] [INFO] Booting worker with pid: 8
+2021-08-04T21:33:39.230361+00:00 app[web.1]: [2021-08-04 21:33:39 +0000] [9] [INFO] Booting worker with pid: 9
+2021-08-04T21:33:39.789925+00:00 heroku[web.1]: State changed from starting to up
+2021-08-04T21:34:11.728877+00:00 app[web.1]: 10.101.182.164 - - [04/Aug/2021:23:34:11 +0200] "GET / HTTP/1.1" 200 5476 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:34:11.728893+00:00 heroku[router]: at=info method=GET path="/" host=indigc.herokuapp.com request_id=a37f775b-62ea-44bd-87b0-8f1cc0e05301 fwd="102.250.0.12" dyno=web.1 connect=1ms service=548ms status=200 bytes=5933 protocol=https
+2021-08-04T21:34:15.866810+00:00 app[web.1]: /app/.heroku/python/lib/python3.8/site-packages/rest_framework/pagination.py:200: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'indig.models.Indicativos'> QuerySet.
+2021-08-04T21:34:15.866821+00:00 app[web.1]: paginator = self.django_paginator_class(queryset, page_size)
+2021-08-04T21:34:16.675440+00:00 heroku[router]: at=info method=GET path="/indicativos/" host=indigc.herokuapp.com request_id=8005d43b-4b3a-442e-acaa-d2862b78a597 fwd="102.250.0.12" dyno=web.1 connect=1ms service=963ms status=500 bytes=403 protocol=https
+2021-08-04T21:34:16.675634+00:00 app[web.1]: 10.101.182.164 - - [04/Aug/2021:23:34:16 +0200] "GET /indicativos/ HTTP/1.1" 500 145 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
+2021-08-04T21:34:31.327847+00:00 heroku[router]: at=info method=GET path="/indicativos/" host=indigc.herokuapp.com request_id=d3372cf0-dba7-4504-bea3-8ebae7e07504 fwd="102.250.0.12" dyno=web.1 connect=1ms service=110ms status=500 bytes=403 protocol=https
+2021-08-04T21:34:31.328038+00:00 app[web.1]: 10.101.182.164 - - [04/Aug/2021:23:34:31 +0200] "GET /indicativos/ HTTP/1.1" 500 145 "https://indigc.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.18 Safari/537.36"
