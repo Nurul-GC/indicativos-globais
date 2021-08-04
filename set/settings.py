@@ -14,6 +14,9 @@ DEBUG = False
 ALLOWED_HOSTS = ['api.heroku.com', '127.0.0.1']
 
 # Application definition
+ROOT_URLCONF = 'set.urls'
+WSGI_APPLICATION = 'set.wsgi.application'
+
 INSTALLED_APPS = [
     'api',
     'django.contrib.admin',
@@ -35,8 +38,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'set.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -52,8 +53,6 @@ TEMPLATES = [
         },
     },
 ]
-
-WSGI_APPLICATION = 'set.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
