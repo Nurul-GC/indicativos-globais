@@ -3,3 +3,4 @@ djangorestframework
 django_heroku
 whitenoise
 dj_database_url
+gunicorn
