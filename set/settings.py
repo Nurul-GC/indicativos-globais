@@ -1,7 +1,7 @@
 from os import path, mkdir
 from pathlib import Path
 from django.core.management.utils import get_random_secret_key
-import django_heroku
+from django_heroku import settings
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,6 +29,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -63,6 +64,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'database/indig.db',
+        'db_from_env': dj_database_url.config(conn_max_age=500)
     }
 }
 
@@ -103,5 +105,5 @@ REST_FRAMEWORK = {
 }
 
 # Heroku definitions
-django_heroku.settings(locals())
+settings(locals())
 TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
