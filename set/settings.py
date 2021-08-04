@@ -12,7 +12,7 @@ SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['agile-shore-43457.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['indigc.herokuapp.com', '0.0.0.0', '127.0.0.1']
 
 # Application definition
 ROOT_URLCONF = 'set.urls'
