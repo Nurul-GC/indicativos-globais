@@ -11,14 +11,14 @@ SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['api.heroku.com', '127.0.0.1']
+ALLOWED_HOSTS = ['indig.heroku.com', '127.0.0.1']
 
 # Application definition
 ROOT_URLCONF = 'set.urls'
 WSGI_APPLICATION = 'set.wsgi.application'
 
 INSTALLED_APPS = [
-    'api',
+    'indig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
