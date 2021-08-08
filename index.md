@@ -22,7 +22,7 @@ A IndiG aceita dois formatos padrao:
 ## Endpoints
 
 - Raiz API: 
-  - <https://indigc.heroku.app/?format=json>
+  - <https://indigc.herokuapp.com/?format=json>
 ```json
 {
   "indicativos": "https://indigc.herokuapp.com/indicativos/?format=json"
@@ -31,7 +31,7 @@ A IndiG aceita dois formatos padrao:
 ![api-root-demo](img/demos/apiroot.png)
 
 - Lista de Paizes e Indicativos: 
-  - <https://indigc.heroku.app/indicativos/?format=json>
+  - <https://indigc.herokuapp.com/indicativos/?format=json>
 ```json
 [
     {
