@@ -28,6 +28,7 @@ A IndiG aceita dois formatos padrao:
   "indicativos": "https://indigc.herokuapp.com/indicativos/?format=json"
 }
 ```
+![api-root-demo](img/demos/apiroot.png)
 
 - Lista de Paizes e Indicativos: 
   - <https://indigc.heroku.app/indicativos/?format=json>
@@ -48,6 +49,7 @@ A IndiG aceita dois formatos padrao:
   ...
 ]
 ```
+![indicativos-list-demo](img/demos/indicativoslist.png)
 
 - Valor especifico: 
   - <https://indigc.herokuapp.com/indicativos/7/?format=json>
@@ -57,6 +59,7 @@ A IndiG aceita dois formatos padrao:
   "pais": "(ANGOLA, 244)"
 }
 ```
+![indicativo-especific-demo](img/demos/indicativoespecifico.png)
 
 ---
 
