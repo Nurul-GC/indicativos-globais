@@ -58,7 +58,7 @@ A IndiG aceita dois formatos padrao:
 }
 ```
 
-[**Clique, para uma ilustração..**](https://nurul-gc.github.io/indicativos-globais)
+[**Clique, para uma ilustração...**](https://nurul-gc.github.io/indicativos-globais)
 
 ---
 
