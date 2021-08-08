@@ -1,13 +1,15 @@
+![indig-icon](img/favicons/favicon-512x512.png)
+
 # indicativos-globais
 
-Com exatamente 240 valores a ***IndiG API*** \
+Com exatamente 240 valores a **IndiG API** \
 esta composta por apenas 2 endpoints, correspondentes ao:
 
 - **retorno total dos valores** 
   - (https://indigc.herokuapp.com/indicativos/) 
 - e ao **retorno de um valor específicado pelo seu número ‘id’** 
   - (https://indigc.herokuapp.com/indicativos/<id>/)
-
+  
 ## Formatos Validos
 
 A IndiG aceita dois formatos padrao:
@@ -55,5 +57,7 @@ A IndiG aceita dois formatos padrao:
   "pais": "(ANGOLA, 244)"
 }
 ```
+
+---
 
 &copy; 2021 Nurul-GC
