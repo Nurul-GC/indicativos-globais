@@ -1,4 +1,4 @@
-![indig-icon](img/favicons/favicon-512x512.png)
+![indig-icon](img/favicons/favicon-192x192.png)
 
 # indicativos-globais
 
