@@ -1,74 +1,69 @@
-<!DOCTYPE html>
-{% load django_bootstrap5 %}
-{% load static %}
-
-<html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  {% bootstrap_css %}
-  {% bootstrap_javascript %}
-
-  <link rel="apple-touch-icon" sizes="180x180"
-        href="{% static '/favicons/apple-touch-icon.png' %}">
-  <link rel="icon" sizes="32x32" type="image/png"
-        href="{% static '/favicons/favicon-32x32.png' %}">
-  <link rel="icon" sizes="16x16" type="image/png"
-        href="{% static '/favicons/favicon-16x16.png' %}">
-  <link rel="shortcut icon"  type="image/x-icon"
-        href="{% static '/favicons/favicon.ico' %}">
-  <link rel="manifest"
-        href="{% static '/favicons/site.webmanifest' %}">
-
-  <title>IndiG</title>
-
-  {% block extra_head %}{% endblock extra_head %}
-</head>
-<body class="bg-dark">
-<nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
-  <a class="navbar-brand" href="{% url 'index' %}">IndiG</a>
-
-  <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarCollapse"
-      aria-controls="navbarCollapse"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'indicativos'%}" title="">Lista de Indicativos</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<main role="main" class="container bg-light" style="padding: 10px; border-radius: 5px;">
-  <div class="pb-2 mb-2 border-bottom">
-    <img src="{% static %}">
-    <h1>indicativos-globais</h1>
-  </div>
-  <div>
-    <p>
+{% extends 'base.html' %}
+{% block content %}
+  <div class="card cd">
+    <h1 class="card-header">indicativos-globais</h1>
+    <p class="card-body">
       Com exatamente 240 valores a <b>IndiG API</b> esta composta
       por apenas 2 endpoints, correspondentes ao:
     </p>
-    <ul>
-      <li><b>retorno total dos valores</b><br>
-      <code>indigc.herokuapp.com/indicativos/</code>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item list-group-item-primary">
+        <dt>Retorno Total Dos Valores:</dt>
+        <code class="endpoint">indigc.herokuapp.com/api/indicativos/</code>
       </li>
-      <li>e <b>retorno de um valor específicado pelo seu número ‘id’</b><br>
-      <code>indigc.herokuapp.com/indicativos/[id]/</code>
+      <li class="list-group-item list-group-item-primary">
+        <dt>E ao Retorno De Um Valor Específicado Pelo Seu Número ‘id’:</dt>
+        <code class="endpoint">indigc.herokuapp.com/api/indicativos/[id]/</code>
       </li>
     </ul>
   </div>
-</main>
-</body>
-</html>
+  <div class="card cd">
+    <h1 class="card-header">Formatos Validos</h1>
+    <p class="card-body">A IndiG aceita dois formatos padrao:</p>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item list-group-item-primary">
+        <dt>JSON</dt>
+        <dd>Para retorno de um JSON o <b>URI</b> da <b>API</b> deve estar acompanhado da
+          consulta <span class="endpoint">?format=json</span> no final.</dd>
+      </li>
+      <li class="list-group-item list-group-item-primary">
+        <dt>API Navegável</dt>
+        <dd>Para ter acesso aos valores de forma navegavel, basta abrir o <b>URI</b> da <b>API
+        </b> num navegador, mas, sem o valor da consulta.</dd>
+      </li>
+    </ul>
+  </div>
+  <div class="card cd">
+    <h1 class="card-header">Endpoints - Responses</h1>
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-primary">
+          <dt>Raiz API:</dt>
+          <dd class="json">
+            // GET: https://indigc.herokuapp.com/api/?format=json<br><br>
+            {"indicativos": "https://indigc.herokuapp.com/api/indicativos/?format=json"}
+          </dd>
+        </li>
+        <li class="list-group-item list-group-item-primary">
+          <dt>Lista de Paizes e Indicativos:</dt>
+          <dd class="json">
+            // GET: https://indigc.herokuapp.com/api/indicativos/?format=json<br><br>
+            [<br>
+              {"id": 1, "pais": "(AFEGANISTÃO, 93)"},<br>
+              {"id": 2, "pais": "(ÁFRICA DO SUL, 27)"},<br>
+              {"id": 3, "pais": "(ALASKA, 1907)"},<br>
+              ...<br>
+            ]
+          </dd>
+        </li>
+        <li class="list-group-item list-group-item-primary">
+          <dt>Valor Especifico</dt>
+          <dd class="json">
+            // GET: https://indigc.herokuapp.com/indicativos/7/?format=json <br><br>
+            {"id": 7, "pais": "(ANGOLA, 244)"}
+          </dd>
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endblock content %}
