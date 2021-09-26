@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load django_bootstrap5 %}
+{% load static %}
+
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="{% static '/favicons/apple-touch-icon.png' %}">
+  <link rel="icon" sizes="32x32" type="image/png"
+        href="{% static '/favicons/favicon-32x32.png' %}">
+  <link rel="icon" sizes="16x16" type="image/png"
+        href="{% static '/favicons/favicon-16x16.png' %}">
+  <link rel="shortcut icon"  type="image/x-icon"
+        href="{% static '/favicons/favicon.ico' %}">
+  <link rel="manifest"
+        href="{% static '/favicons/site.webmanifest' %}">
+
+  <title>IndiG</title>
+
+  {% block extra_head %}{% endblock extra_head %}
+</head>
+<body class="bg-dark">
+<nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
+  <a class="navbar-brand" href="{% url 'index' %}">IndiG</a>
+
+  <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarCollapse"
+      aria-controls="navbarCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'indicativos'%}" title="">Lista de Indicativos</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<main role="main" class="container bg-light" style="padding: 10px; border-radius: 5px;">
+  <div class="pb-2 mb-2 border-bottom">
+    <img src="{% static %}">
+    <h1>indicativos-globais</h1>
+  </div>
+  <div>
+    <p>
+      Com exatamente 240 valores a <b>IndiG API</b> esta composta
+      por apenas 2 endpoints, correspondentes ao:
+    </p>
+    <ul>
+      <li><b>retorno total dos valores</b><br>
+      <code>indigc.herokuapp.com/indicativos/</code>
+      </li>
+      <li>e <b>retorno de um valor específicado pelo seu número ‘id’</b><br>
+      <code>indigc.herokuapp.com/indicativos/[id]/</code>
+      </li>
+    </ul>
+  </div>
+</main>
+</body>
+</html>
