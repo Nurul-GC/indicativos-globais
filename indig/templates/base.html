@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% load django_bootstrap5 %}
+{% load static %}
+
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ledger&display=swap" rel="stylesheet">
+
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="{% static '/favicons/apple-touch-icon.png' %}">
+  <link rel="icon" sizes="32x32" type="image/png"
+        href="{% static '/favicons/favicon-32x32.png' %}">
+  <link rel="icon" sizes="16x16" type="image/png"
+        href="{% static '/favicons/favicon-16x16.png' %}">
+  <link rel="shortcut icon"  type="image/x-icon"
+        href="{% static '/favicons/favicon.ico' %}">
+  <link rel="manifest"
+        href="{% static '/favicons/site.webmanifest' %}">
+
+  <title>IndiG</title>
+
+  <style>
+    body{
+      font-family:'Ledger';
+    }
+    .endpoint{
+      background-color:#E5E5E5;
+      padding:3px;
+      border-radius:3px;
+      color:black;
+    }
+    li{
+      padding:5px;
+    }
+    .bg{
+      background-color:#DEAC89;
+    }
+    .brand-img{
+      margin-left:20px;
+      margin-right:1000px;
+    }
+    .json{
+      background-color:white;
+      padding:10px;
+      color:gray;
+      width:550px;
+      border-radius:3px;
+    }
+    .ft{
+      text-align:center;
+      font-size:8pt;
+      padding-top:5px;
+      padding-bottom:5px;
+      margin-top:20px;
+    }
+    .cd{
+      margin-bottom:20px;
+      margin-left:17%;
+      border-radius:20px;
+      width:855px;
+      padding:20px;
+    }
+  </style>
+
+  {% block extra_head %}{% endblock extra_head %}
+</head>
+<body class="bg">
+  <nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
+    <div class="container-fluid">
+      <a class="navbar-brand brand-img" href="{% url 'index' %}">
+        <img src="{% static '/favicons/favicon-192x192.png' %}"
+             width="60" height="60" alt="...">
+      </a>
+      <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="true"
+          aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/api/" title="">Lista de Indicativos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'sobre' %}">Sobre</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% block content %}{% endblock content %}
+  <footer class="ft border bg-light">&copy; 2021 Todos os direitos reservados.</footer>
+</body>
+</html>
