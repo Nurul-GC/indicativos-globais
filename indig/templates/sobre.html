@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_head %}
+<style>
+  .sobre-cd{
+    background-image:url("{% static 'favicons/favicon-16x16.png' %}");
+    background-color:black;
+    color:white;
+  }
+</style>
+{% endblock extra_head %}
+{% block content %}
+<div class="card cd sobre-cd">
+  <h1 class="card-header">Informacoes sobe o Projecto</h1>
+  <p class="card-body"></p>
+</div>
+{% endblock content %}
