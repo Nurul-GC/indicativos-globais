@@ -11,4 +11,8 @@ class IndicativosViewSet(viewsets.ModelViewSet):
 
 
 def index(request):
-    render(request, 'index.html')
+    return render(request, 'index.html')
+
+
+def sobre(request):
+    return render(request, 'sobre.html')
