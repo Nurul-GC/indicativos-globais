@@ -1,16 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block extra_head %}
-<style>
-  .sobre-cd{
-    background-image:url("{% static 'favicons/favicon-16x16.png' %}");
-    background-color:black;
-    color:white;
-  }
-</style>
-{% endblock extra_head %}
 {% block content %}
-<div class="card cd sobre-cd">
+<div class="card cd">
   <h1 class="card-header">Informações sobe o Projecto</h1>
   <div class="card-body" style="text-align:center;">
     <ul class="list-group list-group-flush">
@@ -18,7 +9,7 @@
         Nome: <b>API IndiG - INDICATIVOS GLOBAIS</b>
       </li>
       <li class="list-group-item list-group-item-primary">
-        Versão: <b>1.6-092021</b>
+        Versão: <b>1.7-092021</b>
       </li>
       <li class="list-group-item list-group-item-primary">
         Programador e Designer: <b><a href="https://github.com/Nurul-GC">Nurul-GC</a></b>
