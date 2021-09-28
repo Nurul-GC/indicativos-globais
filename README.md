@@ -6,9 +6,9 @@ Com exatamente 240 valores a **IndiG API** \
 esta composta por apenas 2 endpoints, correspondentes ao:
 
 - **retorno total dos valores** 
-  - `indigc.herokuapp.com/indicativos/`
+  - `indigc.herokuapp.com/api/indicativos/`
 - e ao **retorno de um valor específicado pelo seu número ‘id’** 
-  - `indigc.herokuapp.com/indicativos/[id]/`
+  - `indigc.herokuapp.com/api/indicativos/[id]/`
   
 ## Formatos Validos
 
@@ -22,15 +22,15 @@ A IndiG aceita dois formatos padrao:
 ## Endpoints
 
 - Raiz API: 
-  - <https://indigc.herokuapp.com/?format=json>
+  - <https://indigc.herokuapp.com/api/?format=json>
 ```json
 {
-  "indicativos": "https://indigc.herokuapp.com/indicativos/?format=json"
+  "indicativos": "https://indigc.herokuapp.com/api/indicativos/?format=json"
 }
 ```
 
 - Lista de Paizes e Indicativos: 
-  - <https://indigc.herokuapp.com/indicativos/?format=json>
+  - <https://indigc.herokuapp.com/api/indicativos/?format=json>
 ```json
 [
     {
@@ -50,7 +50,7 @@ A IndiG aceita dois formatos padrao:
 ```
 
 - Valor especifico: 
-  - <https://indigc.herokuapp.com/indicativos/7/?format=json>
+  - <https://indigc.herokuapp.com/api/indicativos/7/?format=json>
 ```json
 {
   "id": 7,
