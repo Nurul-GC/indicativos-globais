@@ -45,8 +45,8 @@
       background-color:#DEAC89;
     }
     .brand-img{
-      margin-left:20px;
-      margin-right:1000px;
+      margin-left:10px;
+      margin-right:900px;
     }
     .json{
       background-color:white;
@@ -68,6 +68,11 @@
       border-radius:20px;
       width:855px;
       padding:20px;
+    }
+    .btn{
+      border-width:1px;
+      border-color:gray;
+      border-radius:5px;
     }
   </style>
 
@@ -93,10 +98,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/api/" title="">Lista de Indicativos</a>
+            <a class="btn nav-link" href="/api/" title="">Raiz da API</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'sobre' %}">Sobre</a>
+            <a class="btn nav-link" href="/api/indicativos/" title="">Lista de Indicativos</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn nav-link" href="{% url 'sobre' %}">Sobre</a>
           </li>
         </ul>
       </div>
