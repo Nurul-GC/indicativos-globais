@@ -1,3 +1,4 @@
+import os.path
 from os import path, mkdir
 from pathlib import Path
 import dj_database_url
@@ -44,7 +45,7 @@ MIDDLEWARE = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, os.path.join(BASE_DIR, 'indig/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
