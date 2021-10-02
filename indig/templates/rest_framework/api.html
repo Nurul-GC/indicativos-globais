@@ -6,7 +6,7 @@
 {% block content %}
 <div class="card cd">
   <h1 class="card-header ch">
-    {{ request.method }} <u>{{ request.get_full_path }}</u>
+    {{ request.method }}: <u>{{ request.get_full_path }}</u>
   </h1>
 
   <div class="card-body">
