@@ -1,5 +1,4 @@
 {% extends '../base.html' %}
-{% load static %}
 {% load i18n %}
 {% load rest_framework %}
 
@@ -12,13 +11,17 @@
   <div class="card-body">
     <ul class="list-group list-group-flush">
       <li class="list-group-item list-group-item-primary">
-        <pre>
-<b>HTTP {{ response.status_code }} {{ response.status_text }}</b>
-{% for key, val in response_headers|items %}
-<b>{{ key }}:</b>
-<span class="lit">{{ val|break_long_headers|urlize }}</span>
-{% endfor %}
-        </pre>
+        <b>Dados do Cabeçalho:</b>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item list-group-item-primary">
+            <b>HTTP | {{ response.status_code }} | {{ response.status_text }}</b>
+          </li>
+          {% for key, val in response_headers|items %}
+          <li class="list-group-item list-group-item-primary">
+            <b>{{ key }}:</b> <span class="lit">{{ val|break_long_headers|urlize }}</span>
+          </li>
+          {% endfor %}
+        </ul>
         <pre class="json">
 {{ content|urlize }}
         </pre>
