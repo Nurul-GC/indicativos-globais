@@ -1,74 +1,89 @@
 {% extends 'base.html' %}
 {% block content %}
-  <div class="card cd">
-    <h1 class="card-header">Introdução</h1>
-    <p class="card-body">
-      Com exatamente 240 valores a <b>IndiG API</b> está composta
-      por apenas 2 endpoints, correspondentes ao:
-    </p>
-    <ul class="list-group list-group-horizontal">
+<div class="card cd">
+  <h1 class="card-header ch">Introdução</h1>
+  <p class="card-body">
+    Com exatamente 240 valores a <b>IndiG API</b> está composta
+    por apenas 2 endpoints, correspondentes ao:
+  </p>
+  <ul class="list-group list-group-horizontal">
+    <li class="list-group-item list-group-item-primary">
+      <dt>Retorno Total Dos Valores:</dt>
+      <code class="endpoint">indigc.herokuapp.com/api/indicativos/</code>
+    </li>
+    <li class="list-group-item list-group-item-primary">
+      <dt>E ao Retorno De Um Valor Específicado Pelo Seu Número <b>‘id’</b>:</dt>
+      <code class="endpoint">indigc.herokuapp.com/api/indicativos/[id]/</code>
+    </li>
+  </ul>
+</div>
+<br>
+<div class="card cd">
+  <h1 class="card-header ch">Formatos Válidos</h1>
+  <p class="card-body">A IndiG aceita dois formatos padrões:</p>
+  <ul class="list-group list-group-horizontal">
+    <li class="list-group-item list-group-item-primary">
+      <dt>JSON</dt>
+      <dd>Para retorno de um JSON o <b>URI</b> da <b>API</b> deve estar acompanhado da
+        consulta <span class="endpoint">?format=json</span> no final.</dd>
+    </li>
+    <li class="list-group-item list-group-item-primary">
+      <dt>API Navegável</dt>
+      <dd>Para ter acesso aos valores de forma navegável, basta abrir o <b>URI</b> da <b>API
+      </b> num navegador, mas, sem o valor da consulta.</dd>
+    </li>
+  </ul>
+</div>
+<br>
+<div class="card cd">
+  <h1 class="card-header ch">Endpoints & Responses</h1>
+  <div class="card-body">
+    <ul class="list-group list-group-flush">
       <li class="list-group-item list-group-item-primary">
-        <dt>Retorno Total Dos Valores:</dt>
-        <code class="endpoint">indigc.herokuapp.com/api/indicativos/</code>
+        <dt>Raiz API:</dt>
+        <pre class="json">
+// GET: <a href="https://indigc.herokuapp.com/api/?format=json">https://indigc.herokuapp.com/api/?format=json</a>
+
+{
+  "indicativos": "https://indigc.herokuapp.com/api/indicativos/?format=json"
+}
+        </pre>
       </li>
       <li class="list-group-item list-group-item-primary">
-        <dt>E ao Retorno De Um Valor Específicado Pelo Seu Número <b>‘id’</b>:</dt>
-        <code class="endpoint">indigc.herokuapp.com/api/indicativos/[id]/</code>
+        <dt>Lista de Paizes e Indicativos:</dt>
+        <pre class="json">
+// GET: <a href="https://indigc.herokuapp.com/api/indicativos/?format=json">https://indigc.herokuapp.com/api/indicativos/?format=json</a>
+
+[
+  {
+    "id": 1,
+    "pais": "(AFEGANISTÃO, 93)"
+  },
+  {
+    "id": 2,
+    "pais": "(ÁFRICA DO SUL, 27)"
+  },
+  {
+    "id": 3,
+    "pais": "(ALASKA, 1907)"
+  },
+  ...
+]
+        </pre>
+      </li>
+      <li class="list-group-item list-group-item-primary">
+        <dt>Valor Específico</dt>
+        <pre class="json">
+// GET: <a href="https://indigc.herokuapp.com/api/indicativos/7/?format=json">https://indigc.herokuapp.com/api/indicativos/7/?format=json</a>
+
+{
+  "id": 7,
+  "pais": "(ANGOLA, 244)"
+}
+        </pre>
       </li>
     </ul>
   </div>
-  <br>
-  <div class="card cd">
-    <h1 class="card-header">Formatos Válidos</h1>
-    <p class="card-body">A IndiG aceita dois formatos padrões:</p>
-    <ul class="list-group list-group-horizontal">
-      <li class="list-group-item list-group-item-primary">
-        <dt>JSON</dt>
-        <dd>Para retorno de um JSON o <b>URI</b> da <b>API</b> deve estar acompanhado da
-          consulta <span class="endpoint">?format=json</span> no final.</dd>
-      </li>
-      <li class="list-group-item list-group-item-primary">
-        <dt>API Navegável</dt>
-        <dd>Para ter acesso aos valores de forma navegável, basta abrir o <b>URI</b> da <b>API
-        </b> num navegador, mas, sem o valor da consulta.</dd>
-      </li>
-    </ul>
-  </div>
-  <br>
-  <div class="card cd">
-    <h1 class="card-header">Endpoints & Responses</h1>
-    <div class="card-body">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item list-group-item-primary">
-          <dt>Raiz API:</dt>
-          <dd class="json">
-            // GET: <a href="https://indigc.herokuapp.com/api/?format=json">
-            https://indigc.herokuapp.com/api/?format=json</a><br><br>
-            {"indicativos": "https://indigc.herokuapp.com/api/indicativos/?format=json"}
-          </dd>
-        </li>
-        <li class="list-group-item list-group-item-primary">
-          <dt>Lista de Paizes e Indicativos:</dt>
-          <dd class="json">
-            // GET: <a href="https://indigc.herokuapp.com/api/indicativos/?format=json">
-            https://indigc.herokuapp.com/api/indicativos/?format=json</a><br><br>
-            [<br>
-              {"id": 1, "pais": "(AFEGANISTÃO, 93)"},<br>
-              {"id": 2, "pais": "(ÁFRICA DO SUL, 27)"},<br>
-              {"id": 3, "pais": "(ALASKA, 1907)"},<br>
-              ...<br>
-            ]
-          </dd>
-        </li>
-        <li class="list-group-item list-group-item-primary">
-          <dt>Valor Específico</dt>
-          <dd class="json">
-            // GET: <a href="https://indigc.herokuapp.com/api/indicativos/7/?format=json">
-            https://indigc.herokuapp.com/api/indicativos/7/?format=json</a><br><br>
-            {"id": 7, "pais": "(ANGOLA, 244)"}
-          </dd>
-        </li>
-      </ul>
-    </div>
-  </div>
+</div>
+<footer class="ft border bg-light">&copy; 2021 ArtesGC-DevSoft.</footer>
 {% endblock content %}
