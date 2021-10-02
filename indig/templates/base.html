@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ledger&display=swap" rel="stylesheet">
+  <link href="{% static '/css/base.css' %}" type="text/css" rel="stylesheet">
 
   {% bootstrap_css %}
   {% bootstrap_javascript %}
@@ -27,60 +28,6 @@
         href="{% static '/favicons/site.webmanifest' %}">
 
   <title>IndiG</title>
-
-  <style>
-    body{
-      font-family:'Ledger';
-    }
-    .endpoint{
-      background-color:#E5E5E5;
-      padding:3px;
-      border-radius:3px;
-      color:black;
-    }
-    li{
-      padding:5px;
-    }
-    .bg{
-      background-color:#DEAC89;
-    }
-    .brand-img{
-      margin-left:10px;
-      margin-right:70%;
-    }
-    .json{
-      background-color:white;
-      padding:10px;
-      color:gray;
-      width:550px;
-      border-radius:3px;
-    }
-    .ft{
-      text-align:center;
-      font-size:8pt;
-      padding-top:5px;
-      padding-bottom:5px;
-      margin-top:20px;
-    }
-    .cd{
-      margin:auto;
-      border-radius:20px;
-      width:60%;
-      padding:20px;
-    }
-    .btn{
-      border-width:1px;
-      border-color:gray;
-      border-radius:5px;
-    }
-    .btn:hover{
-      border-width:1px;
-      border-color:gray;
-      border-radius:5px;
-      color:black;
-      background-color:#DEAC89;
-    }
-  </style>
 
   {% block extra_head %}{% endblock extra_head %}
 </head>
@@ -117,6 +64,5 @@
     </div>
   </nav>
   {% block content %}{% endblock content %}
-  <footer class="ft border bg-light">&copy; 2021 Todos os direitos reservados.</footer>
 </body>
 </html>
