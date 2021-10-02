@@ -1,0 +1,57 @@
+body{
+  font-family:'Ledger';
+}
+.endpoint{
+  background-color:#E5E5E5;
+  padding:3px;
+  border-radius:3px;
+  color:black;
+}
+li{
+  padding:5px;
+}
+.bg{
+  background-color:#DEAC89;
+}
+.brand-img{
+  margin-left:10px;
+  margin-right:75%;
+}
+.json{
+  background-color:white;
+  padding:10px;
+  color:gray;
+  width:auto;
+  border-radius:3px;
+}
+.ft{
+  text-align:center;
+  font-size:8pt;
+  padding-top:5px;
+  padding-bottom:5px;
+  margin-top:20px;
+}
+.cd{
+  margin:auto;
+  border-radius:20px;
+  width:60%;
+  padding:20px;
+}
+.btn{
+  border-width:1px;
+  border-color:gray;
+  border-radius:5px;
+}
+.btn:hover{
+  border-width:1px;
+  border-color:gray;
+  border-radius:5px;
+  color:black;
+  background-color:#DEAC89;
+}
+ul{
+  width:auto;
+}
+.ch{
+  text-align:center;
+}
