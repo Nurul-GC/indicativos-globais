@@ -1,3 +1,18 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .navbar-brand img {
+  height: 70px;
+  -webkit-transition: height .5s;
+  transition: height .5s;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 body{
   font-family:'Ledger';
 }
@@ -34,7 +49,7 @@ li{
 .cd{
   margin:auto;
   border-radius:10px;
-  width:60%;
+  width:80%;
   padding:20px;
 }
 .btn{
@@ -50,9 +65,9 @@ li{
   color:black;
   background-color:#5AF;
 }
-ul{
+/* ul{
   width:auto;
-}
+} */
 .ch{
   text-align:center;
 }
