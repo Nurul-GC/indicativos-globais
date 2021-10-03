@@ -9,27 +9,26 @@
   </h1>
 
   <div class="card-body">
-    <ul class="list-group list-group-horizontal">
+    <div class="list-group list-group-horizontal">
       <b>Dados do Cabeçalho:</b>
-      <li class="list-group-item list-group-item-primary">
+      <div class="list-group-item list-group-item-primary">
         <b>HTTP | {{ response.status_code }} | {{ response.status_text }}</b>
-      </li>
+      </div>
       {% for key, val in response_headers|items %}
-      <li class="list-group-item list-group-item-primary">
+      <div class="list-group-item list-group-item-primary">
         <b>{{ key }}:</b> <span class="lit">{{ val|break_long_headers|urlize }}</span>
-      </li>
+      </div>
       {% endfor %}
-    </ul>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item list-group-item-primary">
+    </div>
+    <div class="list-group list-group-flush">
+      <div class="list-group-item list-group-item-primary">
         <b>Resposta em JSON:</b>
         <pre class="json">
 {{ content|urlize }}
         </pre>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
-  <a class="btn" href="?format=json">JSON</a>
+  <a class="btn" href="?format=json">Recolher JSON</a>
 </div>
-<footer class="ft fixed-bottom border bg-light">&copy; 2021 ArtesGC-DevSoft.</footer>
 {% endblock content %}
