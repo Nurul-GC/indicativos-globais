@@ -1,32 +1,42 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="card cd">
-  <h1 class="card-header ch">Informações sobre o Projecto</h1>
-  <div class="card-body" style="text-align:center;">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item list-group-item-primary">
-        Nome: <b>API IndiG - INDICATIVOS GLOBAIS</b>
-      </li>
-      <li class="list-group-item list-group-item-primary">
-        Versão: <b>1.9-102021</b>
-      </li>
-      <li class="list-group-item list-group-item-primary">
-        Programador e Designer: <b><a href="https://github.com/Nurul-GC">Nurul-GC</a></b>
-      </li>
-      <li class="list-group-item list-group-item-primary">
-        Empresa: <b>&trade;<a href="https://artesgc.home.blog">ArtesGC Inc</a></b>
-      </li>
-      <li class="list-group-item list-group-item-primary">
-        <a href="https://github.com/Nurul-GC/indicativos-globais">
-          <img src="https://github.com/Nurul-GC/Nurul-GC/raw/main/img/github-icon.svg"
-               alt="github-icon" title="Repositorio da API no GitHub!"></a>
-        <img src="https://img.shields.io/github/license/Nurul-GC/indicativos-globais.svg"
-             alt="license-icon">
-        <img src="https://img.shields.io/github/release/Nurul-GC/indicativos-globais.svg"
-             alt="github-release-info">
-      </li>
-    </ul>
+<div class="container">
+  <div class="card cd">
+    <h1 class="card-header ch">Informações sobre o Projecto</h1>
+    <div class="card-body text-center">
+      <div class="list-group list-group-flush">
+        <div class="list-group-item list-group-item-primary">
+          Nome: <b>API IndiG - INDICATIVOS GLOBAIS</b>
+        </div>
+        <br>
+        <div class="list-group-item list-group-item-primary">
+          Versão: <b>1.9-102021</b>
+        </div>
+        <br>
+        <div class="list-group-item list-group-item-primary">
+          Programador e Designer:
+          <b>
+            <a href="https://github.com/Nurul-GC">Nurul-GC</a> &
+            <a href="https://github.com/Paulo-Lopes-Estevao">Paulo-Lopes-Estevao</a>
+          </b>
+        </div>
+        <br>
+        <div class="list-group-item list-group-item-primary">
+          Empresa: <b>&trade;<a href="https://artesgc.home.blog">ArtesGC Inc</a></b>
+        </div>
+        <br>
+        <div class="list-group-item list-group-item-primary">
+          <a href="https://github.com/Nurul-GC/indicativos-globais">
+            <img src="https://github.com/Nurul-GC/Nurul-GC/raw/main/img/github-icon.svg"
+                 alt="github-icon" title="Repositorio da API no GitHub!"></a>
+          <img src="https://img.shields.io/github/license/Nurul-GC/indicativos-globais.svg"
+               alt="license-icon">
+          <img src="https://img.shields.io/github/release/Nurul-GC/indicativos-globais.svg"
+               alt="github-release-info">
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock content %}
