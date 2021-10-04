@@ -5,6 +5,14 @@
   padding: 0;
 }
 
+body{
+  font-family; "Ledger", serif;
+}
+
+.nb{
+  margin-bottom: 20px;
+}
+
 .navbar .navbar-brand img {
   height: 70px;
   -webkit-transition: height .5s;
@@ -13,61 +21,63 @@
      object-fit: cover;
 }
 
-body{
-  font-family:'Ledger';
+.brand-img:hover{
+  padding: 1px;
 }
+
 .endpoint{
-  background-color:#E5E5E5;
-  padding:3px;
-  border-radius:3px;
-  color:black;
+  background-color: #E5E5E5;
+  padding: 3px;
+  border-radius: 3px;
+  color: black;
 }
-li{
-  padding:5px;
-}
+
 .bg{
-  background-color:#5AF;
+  background-color: #5AF;
 }
-.brand-img{
-  margin-left:10px;
-  margin-right:75%;
-}
+
 .json{
-  background-color:white;
-  padding:10px;
-  color:gray;
-  width:auto;
-  border-radius:3px;
+  background-color: white;
+  padding: 10px;
+  color: gray;
+  width: auto;
+  border-radius: 3px;
 }
+
 .ft{
-  text-align:center;
-  font-size:8pt;
-  padding-top:5px;
-  padding-bottom:5px;
-  margin-top:20px;
+  text-align: center;
+  font-size: 8pt;
+  padding: 5px;
+  margin-top: 20px;
 }
+
 .cd{
-  margin:auto;
-  border-radius:10px;
-  width:80%;
-  padding:20px;
+  margin: auto;
+  border-radius: 10px;
+  width: 80%;
+  padding: 20px;
 }
-.btn{
-  border-width:1px;
-  border-color:gray;
-  border-radius:5px;
-  width:auto;
+
+.botao{
+  border-width: 1px;
+  border-color: gray;
+  border-radius: 5px;
+  width: auto;
+  color: black;
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #5AF;
 }
-.btn:hover{
-  border-width:1px;
-  border-color:gray;
-  border-radius:5px;
-  color:black;
-  background-color:#5AF;
+.botao:hover{
+  border-width: 1px;
+  border-color: gray;
+  border-radius: 5px;
+  color: black;
+  background-color: #B8DAFF;
 }
-/* ul{
-  width:auto;
-} */
+
 .ch{
-  text-align:center;
+  text-align: center;
 }
