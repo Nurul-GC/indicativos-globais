@@ -21,17 +21,16 @@
   <link rel="stylesheet" type="text/css" href="{% static '/css/base.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}">
 
-
   <title>IndiG</title>
 
   {% block extra_head %}{% endblock extra_head %}
 </head>
 
 <body class="bg">
-  <header class="navbar navbar-expand-lg navbar-light bg-light">
+  <header class="nb navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a href="{% url 'index' %}" class="navbar-brand">
-        <img src="{% static '/favicons/favicon-192x192.png' %}" alt="...">
+        <img class="brand-img" src="{% static '/favicons/favicon-512x512.png' %}" alt="...">
       </a>
 
       <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse">
@@ -41,13 +40,13 @@
       <div id="my-nav" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="btn nav-link" href="/api/" title="">Raiz da API</a>
+            <a class="botao nav-link" href="/api/">Raiz da API</a>
           </li>
           <li class="nav-item">
-            <a class="btn nav-link" href="/api/indicativos/" title="">Lista de Indicativos</a>
+            <a class="botao nav-link" href="/api/indicativos/">Lista de Indicativos</a>
           </li>
           <li class="nav-item">
-            <a class="btn nav-link" href="{% url 'sobre' %}">Sobre</a>
+            <a class="botao nav-link" href="{% url 'sobre' %}">Sobre</a>
           </li>
         </ul>
       </div>
