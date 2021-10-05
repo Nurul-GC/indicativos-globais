@@ -7,6 +7,8 @@
 
 body{
   font-family; "Ledger", serif;
+  overflow-wrap: break-word;
+  flex-wrap: wrap;
 }
 
 .nb{
