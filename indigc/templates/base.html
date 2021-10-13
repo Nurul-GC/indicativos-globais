@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ url_for('static', filename='favicons/apple-touch-icon.png') }}">
+  <link rel="icon" sizes="32x32" type="image/png"
+        href="{{ url_for('static', filename='favicons/favicon-32x32.png') }}">
+  <link rel="icon" sizes="16x16" type="image/png"
+        href="{{ url_for('static', filename='favicons/favicon-16x16.png') }}">
+  <link rel="shortcut icon" type="image/x-icon"
+        href="{{ url_for('static', filename='favicons/favicon.ico') }}">
+  <link rel="manifest"
+        href="{{ url_for('static', filename='favicons/site.webmanifest') }}">
+
+  <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static', filename='css/base.css') }}">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Ledger&display=swap">
+  <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+  <title>IndiG</title>
+
+  <style>
+    body{
+      font-family; "Ledger", serif;
+      overflow-wrap: break-word;
+    }
+  </style>
+
+  {% block extra_head %}{% endblock extra_head %}
+</head>
+
+<body class="bg">
+  <header class="nb navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a href="{{ url_for('index') }}" class="navbar-brand">
+        <img class="brand-img"
+             src="{{ url_for('static', filename='favicons/favicon-512x512.png') }}" alt="...">
+      </a>
+
+      <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="my-nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="botao nav-link" href="{{ url_for('paises') }}">Lista de Paises</a>
+          </li>
+          <li class="nav-item">
+            <a class="botao nav-link" href="{{ url_for('indicativos') }}">Lista de
+                Indicativos</a>
+          </li>
+          <li class="nav-item">
+            <a class="botao nav-link" href="{{ url_for('sobre') }}">Sobre</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+  {% block content %}
+  {% endblock content %}
+  </div>
+
+  <footer class="ft border bg-light">&copy; 2021 ArtesGC-DevSoft.</footer>
+
+  <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+
+</html>
