@@ -1,7 +1,1 @@
-Django
-django_bootstrap5
-djangorestframework
-django_heroku
-whitenoise
-dj_database_url
-gunicorn
+Flask
