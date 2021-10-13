@@ -1,1 +1,1 @@
-web: gunicorn wsgi:indigc --log-file -
+web: gunicorn wsgi:app --log-file -
