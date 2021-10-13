@@ -6,59 +6,59 @@ Com exatamente 240 valores a **IndiG API** \
 esta composta por apenas 2 endpoints, correspondentes ao:
 
 - **retorno total dos valores** 
-  - `indigc.herokuapp.com/api/indicativos/`
+  - `indigc.herokuapp.com/indicativos/`
 - e ao **retorno de um valor específicado pelo seu número ‘id’** 
-  - `indigc.herokuapp.com/api/indicativos/[id]/`
+  - `indigc.herokuapp.com/pais/[nome_do_pais]/`
   
 ## Formatos Validos
 
 A IndiG aceita dois formatos padrao:
 
 - JSON
-  - **_Para retorno de um `JSON` o `URI` da _API_ deve estar acompanhado da consulta `?format=json`_ no final...**
+  - **_Para retorno de um `JSON`, existem `URLs` expecificos que retornam os valores requisitados, como mostra a lista em baixo.**
 - API Navegável
-  - **Para ter acesso aos valores de forma navegavel, basta abrir o `URI` da _API_ num navegador, mas, sem o valor da consulta...**
+  - **Para ter acesso aos valores de forma navegavel e responsiva, basta abrir o `URL` da _API_ num navegador.**
 
-## Endpoints
-
-- Raiz API: 
-  - <https://indigc.herokuapp.com/api/?format=json>
-```json
-{
-  "indicativos": "https://indigc.herokuapp.com/api/indicativos/?format=json"
-}
-```
+## Endpoints & Responses
 
 - Lista de Paizes e Indicativos: 
-  - <https://indigc.herokuapp.com/api/indicativos/?format=json>
+  - <https://indigc.herokuapp.com/indicativos/>
+
 ```json
 [
-    {
-        "id": 1,
-        "pais": "(AFEGANISTÃO, 93)"
-    },
-    {
-        "id": 2,
-        "pais": "(ÁFRICA DO SUL, 27)"
-    },
-    {
-        "id": 3,
-        "pais": "(ALASKA, 1907)"
-    }, 
+  {
+    "indicativo": 93,
+    "pais": "AFEGANISTAO"
+  },
+  {
+    "indicativo": 27,
+    "pais": "AFRICA DO SUL"
+  },
+  {
+    "indicativo": 1907,
+    "pais": "ALASKA"
+  },
+  {
+    "indicativo": 355,
+    "pais": "ALBANIA"
+  },
+  {
+    "indicativo": 49,
+    "pais": "ALEMANHA"
+  }, 
   ...
 ]
 ```
 
 - Valor especifico: 
-  - <https://indigc.herokuapp.com/api/indicativos/7/?format=json>
+  - <https://indigc.herokuapp.com/pais/angola/>
+
 ```json
 {
-  "id": 7,
-  "pais": "(ANGOLA, 244)"
+  "indicativo": 244,
+  "pais": "ANGOLA"
 }
 ```
-
-[**Clique, para uma ilustração...**](https://nurul-gc.github.io/indicativos-globais)
 
 ---
 
