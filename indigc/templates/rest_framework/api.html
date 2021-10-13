@@ -1,0 +1,39 @@
+{% extends '../base.html' %}
+{% load i18n %}
+{% load rest_framework %}
+
+{% block content %}
+<div class="container">
+  <div class="card cd">
+    <h1 class="card-header ch">
+      {{ request.method }}: <i>{{ request.get_full_path }}</i>
+    </h1>
+    <p class="card-body"><b>Dados do Cabeçalho:</b></p>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xl-6">
+        <div class="list-group-item list-group-item-primary">
+          <b>HTTP | {{ response.status_code }} | {{ response.status_text }}</b>
+        </div>
+      </div>
+      {% for key, val in response_headers|items %}
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xl-6">
+        <div class="list-group-item list-group-item-primary">
+          <b>{{ key }}:</b> <span class="lit">{{ val|break_long_headers|urlize }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <br>
+    <div class="list-group list-group-flush">
+      <div class="list-group-item list-group-item-primary">
+        <b>Resposta em JSON:</b>
+        <pre class="json">
+{{ content|urlize }}
+        </pre>
+      </div>
+    </div>
+    <br>
+    <a class="botao" href="?format=json">Recolher JSON</a>
+  </div>
+</div>
+{% endblock content %}
